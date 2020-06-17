@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hc.mapper.DeptMapper">
+    <resultMap id="BaseResultMap" type="com.hc.domain.Dept">
+        <!--@mbg.generated-->
+        <!--@Table db_test.tb_dept-->
+        <id column="deptno" property="deptno"/>
+        <result column="dname" property="dname"/>
+        <result column="loc" property="loc"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        deptno, dname, loc
+    </sql>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        <!--@mbg.generated-->
+        delete from db_test.tb_dept
+        where deptno = #{deptno}
+    </delete>
+    <insert id="insert" keyColumn="deptno" keyProperty="deptno" parameterType="com.hc.domain.Dept" useGeneratedKeys="true">
+        <!--@mbg.generated-->
+        insert into db_test.tb_dept (dname, loc)
+        values (#{dname}, #{loc})
+    </insert>
+</mapper>

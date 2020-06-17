@@ -1,0 +1,19 @@
+server:
+  port: 80
+  servlet:
+    context-path: /sm
+
+mybatis:
+  #Mapper.xml所在的位置
+  mapper-locations: classpath*:mapper/*.xml
+  #Entity扫描的model包
+  type-aliases-package: com.hc.domain
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_test?useSSL=false&serverTimezone=GMT%2B8&characterEncoding=utf8&useUnicode=true&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+
